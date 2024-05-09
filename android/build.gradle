@@ -1,5 +1,7 @@
+apply from: "./dynatrace.gradle"
 buildscript {
-    ext.kotlin_version = '1.7.10'
+apply from: "./plugin.gradle", to: buildscript
+    ext.kotlin_version = '1.9.0'
     repositories {
         google()
         mavenCentral()

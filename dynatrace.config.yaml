@@ -1,0 +1,25 @@
+android:
+  config:
+    "dynatrace {
+      configurations {
+        defaultConfig {
+          autoStart{
+            applicationId '111d829b-f589-4886-8b42-ab9003a08020'
+            beaconUrl 'https://bf43686wwa.bf.dynatrace.com/mbeacon'
+          }
+          userOptIn true
+          agentBehavior.startupLoadBalancing true
+        }
+      }
+    }"
+
+ios:
+  config:
+    "<key>DTXApplicationID</key>
+    <string>111d829b-f589-4886-8b42-ab9003a08020</string>
+    <key>DTXBeaconURL</key>
+    <string>https://bf43686wwa.bf.dynatrace.com/mbeacon</string>
+    <key>DTXUserOptIn</key>
+    <true/>
+    <key>DTXStartupLoadBalancing</key>
+    <true/>"

@@ -1,3 +1,4 @@
+import 'package:dynatrace_flutter_plugin/dynatrace_flutter_plugin.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:weather_app/pages/home_page.dart';
@@ -6,7 +7,7 @@ import 'package:weather_app/providers/weather_provider.dart';
 import 'models/weather_model.dart';
 
 void main() {
-  runApp(ChangeNotifierProvider(
+  Dynatrace().start(ChangeNotifierProvider(
       create: (context) {
         return WeatherProvider();
       },
@@ -26,3 +27,5 @@ class WeatherApp extends StatelessWidget {
     );
   }
 }
+//import 'package:dynatrace_flutter_plugin/dynatrace_flutter_plugin.dart';
+// void main() => Dynatrace().start(MyApp());

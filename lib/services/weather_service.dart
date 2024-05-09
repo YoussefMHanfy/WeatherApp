@@ -13,7 +13,9 @@ class WeatherService{
 
     if (response.statusCode == 400) {
       var data  = jsonDecode(response.body);
-      throw Exception(data['error']['message']);
+      throw Exception(data['error']['message']
+
+      );
     }
     Map<String, dynamic> data = jsonDecode(response.body);
 
